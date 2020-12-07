@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EmWave</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <style>
+            html, body {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 14px;
+                margin: 0;
+                min-height: 180px;
+                padding: 0;
+                width: 384px;
+            }
+
+            h1 {
+                font-family: 'Menlo', monospace;
+                font-size: 22px;
+                font-weight: 400;
+                margin: 0;
+                color: #386A80
+            }
+
+            a:link, a:visited {
+                color: #000;
+                outline: 0;
+                text-decoration: none;
+            }
+
+            img {
+                width: 30px;
+            }
+
+            .modal-header {
+                align-items: center;
+                border-bottom: 0.5px solid #dadada;
+            }
+
+            .modal-content {
+                padding: 0 22px;
+                color: #2A3333;
+            }
+
+            .modal-icons {
+                border-top: 0.5px solid #dadada;
+                padding-top: 0;
+                height: 80px;
+                width: 100%;
+                color: #2A3333;
+            }
+
+            .logo {
+               padding: 16px; 
+            }
+
+            .logo-icon {
+                vertical-align: text-bottom;
+                margin-right: 12px;
+            }
+
+            .flex-container {
+                display: inline-table;
+                justify-content: space-between;
+                padding: 10px 22px;
+            }
+
+            .flex {
+                display:inline-table;
+                justify-content: space-between;
+                width: 120px;
+                padding-top: 4px;
+                padding-bottom: 5px;
+            }
+
+            .flax .fa {
+                font-size: 40px;
+                color: #5AA7BF
+            }
+
+            .checklist {
+                list-style: none;
+                padding: 0;
+            }
+
+            .submit {
+                padding-left: 22px;
+                padding-bottom: 22px;
+            }
+
+        </style>
+
+</head>
+
+<body>
+    <div class="modal-header">
+        <h1 class="logo">
+            <img src="icon_128.png" alt="EmWave Check-in" class="logo-icon"> EmWave Check-in
+        </h1>
+    </div>
+    <div class="modal-content">
+        <p>How are you feeling?</p>
+    </div>
+    <div class="modal-icons">
+        <div class="flex-container">
+            <div class="flex">
+                <i class="fa fa-clock-o"></i>
+                <form>
+                    <label for="time">
+                        <input type="time" id="time" />
+                    </label>
+                </form>
+            </div>
+            <div class="flex">
+                <i class="fa fa-pencil"></i>
+                <form>
+                    <label for="activity">
+                        <input type="text" id="activity" placeholder="Currently doing:" />
+                    </label>
+                </form>
+            </div>
+            <div class="flex">
+                <i class="fa fa-line-chart"></i>
+                <form class="checklist">
+                    <label for="work-level"> Current work level:
+                        <li><input type="radio" id="work-level"/>Low</li>
+                        <li><input type="radio" id="work-level"/>Med</li>
+                        <li><input type="radio" id="work-level"/>High</li>
+                    </label>
+                </form>
+            </div>
+            <div class="flex">
+                <i class="fa fa-smile-o"></i>
+                <form class="checklist">
+                    <label for="feeling"> Currently feeling:
+                        <li><input type="radio" id="feeling"/>Productive</li>
+                        <li><input type="radio" id="feeling"/>Relaxed</li>
+                        <li><input type="radio" id="feeling"/>Tired</li>
+                        <li><input type="radio" id="feeling"/>Stressed</li>
+                        <li><input type="radio" id="feeling"/>Restless</li>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <label class="submit">
+            <input type="button" value="Submit" onclick="myScript"/> 
+            <script src="popup.js"></script>
+        </label>
+    </div>
+    
+</body>
+
+</html>
+
